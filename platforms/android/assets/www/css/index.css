@@ -1,0 +1,507 @@
+
+/* CORDOVA CSS - DO NOT TOUCH */  
+
+
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+
+
+body {
+  background-color: #f3f3f3;
+  -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+  -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+
+  font-family:Calibri;
+  /*New CSS for responsive font-sizing, before it was 12px, check if OK @JeriG*/
+  font-size: 1em; 
+
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  background-image: url("../img/building.gif");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 100%;
+}
+
+
+/*RESPONSIVE FONTS*/
+html { font-size: 62.5%; }
+
+@media (max-width: 300px) {
+    html { font-size: 70%; }
+}
+
+@media (min-width: 500px) {
+    html { font-size: 80%; }
+}
+
+@media (min-width: 700px) {
+    html { font-size: 120%; }
+}
+
+@media (min-width: 1200px) {
+    html { font-size: 200%; }
+}
+
+
+/* Portrait layout (default) */
+
+.app {
+  /* THIS IS CENTERED, REALLY CENTERED */
+  padding: 10% 5% 10% 5%;
+
+  /* dunno what this is but it fucks with the whole rest of the CSS, thats why some commented */
+  /* text area width */
+  text-align:left;
+  /* padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+  /* margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+  /* offset horizontal: half of text area width */
+}
+
+
+
+/* whole Application, all Itempages */
+
+
+#mask {
+  height:100%;
+}
+
+/* ITEM CLASS - single Potential Sites*/
+
+.item {
+  padding: 10% 5% 10% 5%;
+}
+
+/* Potential content: Box in the middle */
+.content {
+  height: auto; /*new 12.03.15*/
+  top: 10%;
+  margin:0 20px 0 20px;
+  background-color:#fff;
+  position:relative;
+  border: 10px solid #BE0B1E;
+  padding: 10px;
+
+}
+
+.databtns{
+  background-color:#666666;
+  border: 1px;
+  border-color:black;
+  border-style:solid;
+  padding: 10px 10px 10px 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  color:#000;
+  font-size:2em;  
+  display: block;
+  margin: 8px auto 8px auto;
+}
+
+canvas{
+  display: block;
+  <<<<<<< HEAD
+  margin-left: auto;
+  margin-right: auto;
+  height:400;
+  width:600;    
+}
+
+textarea {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+}
+
+.selected {
+  /* background:#fff; */ /*background bug 23.02.15, maybe outcomment this helps*/
+  font-weight:700;
+}
+
+.clear {
+  clear:both;
+} 
+
+h1 {
+  font-family: Calibri;
+  font-size: 3em; /*changed to 2em 03.04.15*/
+  font-weight: bold;
+  margin: 0px;
+
+  overflow:inherit;
+  padding: 0px;
+  text-align: center;
+}
+h2{
+  =======
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+h1 {
+  >>>>>>> 3d8e144d4b124c5395483161905afa9302899300
+  font-family: Calibri;
+
+  font-weight: bold;
+  margin: 0px;
+
+  overflow:inherit;
+  padding: 0px;
+  text-align: center;
+}
+
+.event {
+  border-radius:4px;
+  -webkit-border-radius:4px;
+  color:#FFFFFF;
+  font-size:12px;
+  margin:0px 30px;
+  padding:2px 0px;
+}
+
+.event.listening {
+  /* background-color:#333333; */ /*not needed*/
+  display:block;
+}
+
+.event.received {
+  /* background-color:#4B946A; */ /*not needed */
+  display:none;
+}
+
+/* SCROLL WITH 2 FINGERS */
+
+#howToScroll {
+  padding: 0% 25% 0 25%;
+}
+
+/* Progress Bar CSS */
+
+.progress {
+  height:20px;
+  margin-bottom:20px;
+  overflow:hidden;
+  background-color:#D2C7C7;
+  border-radius:4px;
+  -webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,.1);
+  box-shadow:inset 0 1px 2px rgba(0,0,0,.1)
+}
+
+.progress-bar {
+  float:left;
+  width:0;height:100%;
+  font-size:12px;
+  line-height:20px;
+  color:#fff;
+  text-align:center;
+  background-color:red;
+  -webkit-box-shadow:inset 0 -1px 0 rgba(0,0,0,.15);
+  box-shadow:inset 0 -1px 0 rgba(0,0,0,.15);
+  -webkit-transition:width .6s ease;
+  -o-transition:width .6s ease;
+  transition:width .6s ease
+}
+
+.progress-striped .progress-bar,.progress-bar-striped {
+  background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  background-image:-o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  background-image:linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  -webkit-background-size:40px 40px;background-size:40px 40px
+}
+
+.progress.active .progress-bar,.progress-bar.active{
+  -webkit-animation:progress-bar-stripes 2s linear infinite;
+  -o-animation:progress-bar-stripes 2s linear infinite;
+  animation:progress-bar-stripes 2s linear infinite
+}
+
+.progress-bar-success{
+  background-color:#666666
+}
+
+
+
+
+
+@keyframes fade {
+  from { opacity: 1.0; }
+  50% { opacity: 0.4; }
+  to { opacity: 1.0; }
+}
+
+@-webkit-keyframes fade {
+  from { opacity: 1.0; }
+  50% { opacity: 0.4; }
+  to { opacity: 1.0; }
+}
+
+
+/* CONSULTA SPECIFIC CSS */
+
+/*BUTTONS CSS*/
+
+.HelpButton {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  /*very ugly*/
+  margin-top: -60px;
+  top: 1%;
+  left: 46%;
+
+}
+/*Da kein Margintop bei Index*/
+.indexHelpButton {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  /*very ugly*/
+
+  top: 1%;
+  left: 46%;
+
+}
+
+
+
+
+/* never needed, just for the case */
+#StartButton { 
+  width: 100%;
+  padding: 10px 10px 10px 10px;
+  background: #35b128;
+  border: 3px solid #33842a; 
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+  -moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+  box-shadow: 0 0 4px rgba(0,0,0, .75);
+  color:#f3f3f3;
+  font-size:2em;
+  text-align:center;
+}
+
+/* actually only this one is needed */
+#lastPage .StartButton {
+  width: 45%;
+  padding: 10px 10px 10px 10px;
+  background: #35b128;
+  border: 3px solid #33842a; 
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+  -moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+  box-shadow: 0 0 4px rgba(0,0,0, .75);
+  color:#f3f3f3;
+  font-size:2em;
+  text-align:center;
+  float: right;
+}
+
+.StartButton:hover, .StartButton:focus {
+  /*background darker*/
+  background-color :#399630; 
+
+  /*pushed button effect*/
+  -webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+  -moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+  box-shadow: 0 0 1px rgba(0,0,0, .75);
+}
+
+#ContinueButton { 
+  width: 45%;
+  padding: 10px 10px 10px 10px;
+  background: #35b128;
+  border: 3px solid #33842a; 
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+  -moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+  box-shadow: 0 0 4px rgba(0,0,0, .75);
+  color:#f3f3f3;
+  font-size:2em;
+  margin-left: 10%;
+  height: auto;
+  text-align:center;
+}
+
+
+#Bpanel {
+  background-color:#BE0B1E;
+  color: white;
+  border: 3px solid #000;
+  float: left;
+  height: auto;
+  width: 45%;
+  padding: 10px 10px 10px 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  font-size:2em;   
+  text-align:center;
+}
+
+#Bpanel:hover, #Bpanel:focus {
+  /*background darker*/
+  background-color :#F60A0A; 
+
+  /*pushed button effect*/
+  -webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+  -moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+  box-shadow: 0 0 1px rgba(0,0,0, .75);
+}
+
+
+#lastPage #Bpanel {
+  background-color:#BE0B1E;
+  color: white;
+  border: 3px solid #000;
+  height: auto;
+  width: 45%;
+  padding: 10px 10px 10px 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  font-size:2em;
+  text-align:center;
+  float: none;
+}
+
+
+#Fpanel {
+  background-color:#BE0B1E;
+  color: white;
+  border: 3px solid #000;
+  height: auto;
+  /*float: right;*/
+  width: 45%;
+  text-align:center;
+  padding: 10px 10px 10px 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  font-size:2em;
+  margin-left: 10%;
+}
+
+#Fpanel:hover, #Fpanel:focus {
+  /*change background*/
+  background-color :#F60A0A; 
+
+  /*pushed button effect*/
+  -webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+  -moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+  box-shadow: 0 0 1px rgba(0,0,0, .75);
+}
+
+
+
+/* STAR RATING CSS */
+
+.starRating{
+  display        : inline-block;
+  position       : relative;
+  height         : 24px;
+  background     : url('../img/stars.png') repeat-x 0 0;
+  vertical-align : bottom;
+}
+
+.starRating div{
+  float    : left;
+  position : relative;
+  height   : 24px;
+}
+
+.starRating input{
+  position : relative;
+  z-index  : 1;
+  width    : 24px;
+  height   : 24px;
+  margin   : 0;
+  padding  : 0;
+  opacity  : 0;
+}
+
+.starRating label{
+  position : absolute;
+  top      : 0;
+  left     : 0;
+  width    : 100%;
+  height   : 24px;
+}
+
+.starRating span {
+  display : none;
+}
+
+.starRating       input:checked       + label,
+.starRating:hover input:checked:hover + label {
+  background : url('../img/stars.png') repeat-x 0 -24px;
+}
+
+.starRating:hover input:checked + label{
+  background : transparent;
+}
+
+.starRating:hover input:hover + label{
+  background : url('../img/stars.png') repeat-x 0 -48px;
+}
+
+.black_overlay {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 1550px;
+  background-color: black;
+  z-index:1001;
+  -moz-opacity: 0.8;
+  opacity:.80;
+  filter: alpha(opacity=80);
+}
+
+.white_content {
+  display: none;
+  position: absolute;
+  top: 800px;
+  left: 25%;
+  width: 50%;
+  height: 300px;
+  padding: 16px;
+  border: 1px solid red;
+  background-color: white;
+  z-index:1002;
+  overflow: auto;
+}
+
+p.pos_relative {
+  position: relative;
+  top: -31px;
+  left: 235px;
+}
+
+    /* 
+
+    Consulta Homepage CSS for Colors etc
+
+    body: background-color: #f3f3f3;
+    sidebar: background-color: #666666;
+    rot: background-color: #BE0B1E;
+    rot links:  #F60A0A;
+
+    */

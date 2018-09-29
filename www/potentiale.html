@@ -1,0 +1,730 @@
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+  <title>Nutzenpotenziale bewerten</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+</head>
+
+<body>
+  <div data-dom-cache="true" data-role="page">
+    <div id="mask">
+      <li class="first dragend-page" id="firstPage">
+        <div class="content">
+          <a href="#" onclick="window.open('http://www.consag.ch/consulta/index.php/de/unsere-geschaeftsfelder/strategie-app', '_system');"><img src="img/help.png" class="HelpButton" alt="Help Button"></a>
+          
+          <h1>Externe Nutzenpotenziale</h1>
+          <br>
+          <p>Es folgen die externen Nutzenpotenziale. Bitte bewerten Sie anhand der Sterne (1-5), wie hoch sie das jeweilige Potenzial für Ihr Unternehmen einschätzen und fügen Sie bei Bedarf eine eigene Notiz hinzu.</p>
+          <p>Benutzen Sie zum Navigieren zwischen den einzelnen Potenzialen die vorgefertigten Buttons oder wischen Sie mit ihrem Finger in die entsprechende Richtung über den Bildschirm. Scrollen funktoniert wie anbei abgebildet.</p>
+          <a id="howToScroll"><img src="img/twofinger.png" alt="twoFingers"></a>
+          <button class="nav" type="submit" id="StartButton" data-page="2" ontouchstart=""><a>LOS GEHTS</a></button>
+        </div>
+      </li>
+
+      <li class="dragend-page">
+        <div class="content">
+          <h1>Sourcing-Potenzial</h1>
+          <a href="#" onclick="window.open('http://www.consag.ch/consulta/index.php/de/unsere-geschaeftsfelder/strategie-app', '_system');"><img src="img/help.png" class="HelpButton" alt="Help Button"></a>
+
+          <h3>Wertschöpfung durch verbesserte Beschaffung</h3>
+          <br>
+          Denkanstösse: Wie gross ist der Anteil der extern beschafften Güter & DL 
+          an der dem Kunden 
+          verrechneten Gesamtleistung? Sind wir in der Lage, 
+          durch eine verbesserte Beschaffung unsere Margen zu erhöhen?         
+          <br>
+          <br>
+          Bewertung: 
+          <div class="starRating" id="firstrating">
+            <div>
+              <div>
+                <div>
+                  <div>
+                    <input id="rating1" type="radio" name="sourcing" value="1"><label for="rating1"><span>1</span></label>
+                  </div>
+                  <input id="rating2" type="radio" name="sourcing" value="2"><label for="rating2"><span>2</span></label>
+                </div>
+                <input id="rating3" type="radio" name="sourcing" value="3"><label for="rating3"><span>3</span></label>
+              </div>
+              <input id="rating4" type="radio" name="sourcing" value="4" ><label for="rating4"><span>4</span></label>
+            </div>
+            <input id="rating5" type="radio" name="sourcing" value="5"><label for="rating5"><span>5</span></label>
+          </div>
+          <br>
+          <br>
+          Bemerkung:<textarea name="sourcing_text" id="myText" cols="30" rows="2"></textarea>
+          <br>
+          <div class="progress" style="width:50%;margin-left:auto;margin-right:auto">
+            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="18" style="width:5.5%" text-align="center">
+              1/18
+            </div>
+          </div>
+          <br>
+          <input class="nav" type="button" value="Zurück" id="Bpanel" data-page="1">
+          <input class="nav" type="button" value="Weiter" id="Fpanel" data-page="3">
+        </div>
+      </li>
+
+      <li class="dragend-page">
+        <div class="content">
+          <h1>Externes Humanpotenzial</h1>
+          <a href="#" onclick="window.open('http://www.consag.ch/consulta/index.php/de/unsere-geschaeftsfelder/strategie-app', '_system');"><img src="img/help.png" class="HelpButton" alt="Help Button"></a>             <br>
+          <h3>Wertschöpfung durch  verbesserte Personalrekrutierung</h3>
+          <br>
+          Denkanstösse: Sind wir in der Lage, die Besten ihres Fachs zu rekrutieren? 
+          <br>
+          <br>
+          Bewertung: 
+          <div class="starRating" id="secondrating">
+            <div>
+              <div>
+                <div>
+                  <div>
+                    <input id="human1" type="radio" name="human" value="1"><label for="human1"><span>1</span></label>
+                  </div>
+                  <input id="human2" type="radio" name="human" value="2"><label for="human2"><span>2</span></label>
+                </div>
+                <input id="human3" type="radio" name="human" value="3"><label for="human3"><span>3</span></label>
+              </div>
+              <input id="human4" type="radio" name="human" value="4" ><label for="rating4"><span>4</span></label>
+            </div>
+            <input id="rating5" type="radio" name="human" value="5"><label for="rating5"><span>5</span></label>
+          </div>
+          <br>
+          <br>
+          Bemerkung:<textarea name="human_text" cols="30" rows="2"></textarea>
+          <br>
+          <div class="progress" style="width:50%;margin-left:auto;margin-right:auto">
+            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="18" style="width:11.1%" text-align="center">
+              2/18
+            </div>
+          </div>
+          <br>
+          <input class="nav" type="button" value="Zurück" id="Bpanel" data-page="2">
+          <input class="nav" type="button" value="Weiter" id="Fpanel" data-page="4">
+        </div>
+      </li>
+
+      <li class="dragend-page">
+        <div class="content">
+          <h1>Finanzpotenzial</h1>
+          <a href="#" onclick="window.open('http://www.consag.ch/consulta/index.php/de/unsere-geschaeftsfelder/strategie-app', '_system');"><img src="img/help.png" class="HelpButton" alt="Help Button"></a>         <br>
+          <h3>Wertschöpfung durch verbesserte Finanzierungskonditionen</h3>
+          <br>
+          Denkanstösse: Sind wir in der Lage, eigene neue Projekte durch externe Kapitalgeber günstiger zu finanzieren?
+          <br><br>
+          Bewertung: 
+          <div class="starRating" id="thirdrating">
+            <div>
+              <div>
+                <div>
+                  <div><input id="finanz1" type="radio" name="finanz" value="1"><label for="finanz1"><span>1</span></label></div>
+                  <input id="finanz2" type="radio" name="finanz" value="2"><label for="finanz2"><span>2</span></label>
+                </div>
+                <input id="finanz3" type="radio" name="finanz" value="3"><label for="finanz3"><span>3</span></label>
+              </div>
+              <input id="finanz4" type="radio" name="finanz" value="4" ><label for="finanz4"><span>4</span></label>
+            </div>
+            <input id="finanz5" type="radio" name="finanz" value="5"><label for="finanz5"><span>5</span></label>
+          </div>
+          <br><br>Bemerkung:<textarea name="finanz_text" cols="30" rows="2"></textarea><br>
+          <div class="progress" style="width:50%;margin-left:auto;margin-right:auto">
+            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="18" style="width:16.7%" text-align="center">
+              3/18
+            </div>
+          </div>
+          <br>
+
+          <input class="nav" type="button" value="Zurück" id="Bpanel" data-page="3">
+          <input class="nav" type="button" value="Weiter" id="Fpanel" data-page="5">
+        </div>
+      </li>
+
+      <li class="dragend-page">
+        <div class="content">
+          <h1>Imagepotenzial</h1>
+          <a href="#" onclick="window.open('http://www.consag.ch/consulta/index.php/de/unsere-geschaeftsfelder/strategie-app', '_system');"><img src="img/help.png" class="HelpButton" alt="Help Button"></a>         <br>
+          <h3>Vorteile der eigenen Reputation wertschöpfend nutzen</h3>
+          <br>
+          Denkanstösse: Haben wir ein gutes Image - und nutzen wir dieses Image, z.B. für die Auslastung oder die Preisgestaltung zu Gunsten der Unternehmung?
+          <br><br>
+          Bewertung: 
+          <div class="starRating" id="fourthrating">
+            <div>
+              <div>
+                <div>
+                  <div>
+                    <input id="image1" type="radio" name="image" value="1"><label for="image1"><span>1</span></label>
+                  </div>
+                  <input id="image2" type="radio" name="image" value="2"><label for="image2"><span>2</span></label>
+                </div>
+                <input id="image3" type="radio" name="image" value="3"><label for="image3"><span>3</span></label>
+              </div>
+              <input id="image4" type="radio" name="image" value="4" ><label for="image4"><span>4</span></label>
+            </div>
+            <input id="image5" type="radio" name="image" value="5"><label for="image5"><span>5</span></label>
+          </div>
+          <br><br>Bemerkung:<textarea name="image_text" cols="30" rows="2"></textarea>
+          <br><div class="progress" style="width:50%;margin-left:auto;margin-right:auto">
+          <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="18" style="width:22.2%" text-align="center">
+            4/18
+          </div>
+        </div>
+        <br>
+
+        <input class="nav" type="button" value="Zurück" id="Bpanel" data-page="4">
+        <input class="nav" type="button" value="Weiter" id="Fpanel" data-page="6">
+      </div>
+    </li>
+
+    <li class="dragend-page">
+      <div class="content">
+        <h1>E-Business-Potenzial</h1>
+        <a href="#" onclick="window.open('http://www.consag.ch/consulta/index.php/de/unsere-geschaeftsfelder/strategie-app', '_system');"><img src="img/help.png" class="HelpButton" alt="Help Button"></a>         <br>
+        <h3>Wertschöpfender Einsatz von E-Business Strukturen bei der Marktleistungsgestaltung</h3>
+        <br>
+        Denkanstösse: Sind unsere Kunden empfänglich für E-Business und Internettechnologien? Lassen sich neue Kunden gewinnen oder Kosten einsparen? Können neue Leistungen angeboten werden?<br><br>
+        Bewertung: 
+        <div class="starRating" id="fifthrating">
+          <div>
+            <div>
+              <div>
+                <div>
+                  <input id="ebusiness1" type="radio" name="ebusiness" value="1"><label for="ebusiness1"><span>1</span></label>
+                </div>
+                <input id="ebusiness2" type="radio" name="ebusiness" value="2"><label for="ebusiness2"><span>2</span></label>
+              </div>
+              <input id="ebusiness3" type="radio" name="ebusiness" value="3"><label for="ebusiness3"><span>3</span></label>
+            </div>
+            <input id="ebusiness4" type="radio" name="ebusiness" value="4" ><label for="ebusiness4"><span>4</span></label>
+          </div>
+          <input id="ebusiness5" type="radio" name="ebusiness" value="5"><label for="ebusiness5"><span>5</span></label>
+        </div>
+      </td><br><br>Bemerkung: <textarea name="ebusiness_text" cols="30" rows="2"></textarea><br>
+      <div class="progress" style="width:50%;margin-left:auto;margin-right:auto">
+        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="18" style="width:27.8%" text-align="center">
+          5/18
+        </div>
+      </div><br>
+
+      <input class="nav" type="button" value="Zurück" id="Bpanel" data-page="5">
+      <input class="nav" type="button" value="Weiter" id="Fpanel" data-page="7">
+    </div>
+  </li>
+
+  <li class="dragend-page">
+    <div class="content">
+      <h1>Kooperations-potenzial</h1>
+      <a href="#" onclick="window.open('http://www.consag.ch/consulta/index.php/de/unsere-geschaeftsfelder/strategie-app', '_system');"><img src="img/help.png" class="HelpButton" alt="Help Button"></a>         <br>
+      <h3>Aufbau von Wertschöpfungsnetzwerken zwecks Kostensenkung und Leistungssteigerung</h3>
+      <br>
+      Denkanstösse: Sind wir für Kooperationen geeignet? Welchen Mehrwert können wir dadurch erzielen? Welche Partner wären denkbar?<br><br>
+      Bewertung: 
+      <div class="starRating" id="sixthrating">
+        <div>
+          <div>
+            <div>
+              <div>
+                <input id="kooperation1" type="radio" name="kooperation" value="1"><label for="kooperation1"><span>1</span></label>
+              </div>
+              <input id="kooperation2" type="radio" name="kooperation" value="2"><label for="kooperation2"><span>2</span></label>
+            </div>
+            <input id="kooperation3" type="radio" name="kooperation" value="3"><label for="kooperation3"><span>3</span></label>
+          </div>
+          <input id="kooperation4" type="radio" name="kooperation" value="4" ><label for="kooperation4"><span>4</span></label>
+        </div>
+        <input id="kooperation5" type="radio" name="kooperation" value="5"><label for="kooperation5"><span>5</span></label>
+      </div>
+      <br><br>Bemerkung: <textarea name="kooperation_text" cols="30" rows="2"></textarea><br>
+      <div class="progress" style="width:50%;margin-left:auto;margin-right:auto">
+        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="18" style="width:33.3%" text-align="center">
+          6/18
+        </div>
+      </div>
+      <br>
+
+      
+      <input class="nav" type="button" value="Zurück" id="Bpanel" data-page="6">
+      <input class="nav" type="button" value="Weiter" id="Fpanel" data-page="8">
+    </div>
+  </li>
+
+  <li class="dragend-page">
+    <div class="content">
+      <h1>Marktpotenzial</h1>
+      <a href="#" onclick="window.open('http://www.consag.ch/consulta/index.php/de/unsere-geschaeftsfelder/strategie-app', '_system');"><img src="img/help.png" class="HelpButton" alt="Help Button"></a>         <br>
+      <h3>Druchdringung in neue Marktsegmente oder Absatzmärkte</h3>
+      <br>
+      Denkanstösse: Sind wir in der Lage, neue Kundenbedürfnisse frühzeitig zu erkennen? Ändern sich die Kundenbedürfnisse laufend? Gibt es Kundengruppen, die heute noch nicht angesprochen werden, obschon wir Leistungen erfolgreich anbieten könnten? <br><br>
+      Bewertung: 
+      <div class="starRating" id="seventhrating">
+        <div>
+          <div>
+            <div>
+              <div><input id="markt1" type="radio" name="markt" value="1">
+                <label for="markt1"><span>1</span></label>
+              </div>
+              <input id="markt2" type="radio" name="markt" value="2">
+              <label for="markt2"><span>2</span></label>
+            </div>
+            <input id="markt3" type="radio" name="markt" value="3"><label for="markt3">
+            <span>3</span></label>
+          </div>
+          <input id="markt4" type="radio" name="markt" value="4" ><label for="markt4"><span>4</span></label>
+        </div>
+        <input id="markt5" type="radio" name="markt" value="5"><label for="markt5"><span>5</span></label>
+      </div>
+      <br><br>Bemerkung:
+      <textarea name="markt_text" cols="30" rows="2"></textarea><br>
+      <div class="progress" style="width:50%;margin-left:auto;margin-right:auto">
+        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="18" style="width:38.9%" text-align="center">
+          7/18
+        </div>
+      </div>
+      <br>
+      
+      <input class="nav" type="button" value="Zurück" id="Bpanel" data-page="7">
+      <input class="nav" type="button" value="Weiter" id="Fpanel" data-page="9">
+    </div>
+  </li>
+
+  <li class="dragend-page">
+    <div class="content">
+      <h1>Ökologiepotenzial</h1>
+      <a href="#" onclick="window.open('http://www.consag.ch/consulta/index.php/de/unsere-geschaeftsfelder/strategie-app', '_system');"><img src="img/help.png" class="HelpButton" alt="Help Button"></a>         <br>
+      <h3>Erschliessung von ökosensitiven Kundensegmenten</h3>
+      <br>
+      Denkanstösse: Werden bei der Erstellung unserer Leistung viele umweltschädliche Substanz freigesetzt? Gibt es Kundensegmente, die bzgl. ökologischer Themen noch besser bedient werden könnten?<br><br>
+      Bewertung: 
+      <div class="starRating" id="eighthrating">
+        <div>
+          <div>
+            <div>
+              <div><input id="oeko1" type="radio" name="oeko" value="1">
+                <label for="oeko1"><span>1</span></label>
+              </div>
+              <input id="oeko2" type="radio" name="oeko" value="2">
+              <label for="oeko2"><span>2</span></label>
+            </div>
+            <input id="oeko3" type="radio" name="oeko" value="3">
+            <label for="oeko3"><span>3</span></label>
+          </div>
+          <input id="oeko4" type="radio" name="oeko" value="4" >
+          <label for="oeko4"><span>4</span></label>
+        </div>
+        <input id="oeko5" type="radio" name="oeko" value="5">
+        <label for="oeko5"><span>5</span></label>
+      </div>
+      <br><br>Bemerkung: <textarea name="oeko_text" cols="30" rows="2"></textarea>
+      <br>
+      <div class="progress" style="width:50%;margin-left:auto;margin-right:auto">
+        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="18" style="width:44.5%" text-align="center">
+          8/18
+        </div>
+      </div>
+      <br>
+      
+      <input class="nav" type="button" value="Zurück" id="Bpanel" data-page="8">
+      <input class="nav" type="button" value="Weiter" id="Fpanel" data-page="10">
+    </div>
+  </li>
+
+  <li class="dragend-page">
+    <div class="content">
+      <h1>Technologie-potenzial</h1>
+      <a href="#" onclick="window.open('http://www.consag.ch/consulta/index.php/de/unsere-geschaeftsfelder/strategie-app', '_system');"><img src="img/help.png" class="HelpButton" alt="Help Button"></a>         <br>
+      <h3>Wertschöpfung durch den Einsatz von neuen Technologien</h3>
+      <br>
+      Denkanstösse: Sind wir innovativ? Werden Verbesserungen laufend umgesetzt? Setzen wir neue Technologien/ Erkenntnisse rasch ein und um?<br><br>
+      Bewertung: 
+      <div class="starRating" id="ninthrating">
+        <div>
+          <div>
+            <div>
+              <div>
+                <input id="techno1" type="radio" name="techno" value="1">
+                <label for="techno1"><span>1</span></label>
+              </div>
+              <input id="techno2" type="radio" name="techno" value="2">
+              <label for="techno2"><span>2</span></label>
+            </div>
+            <input id="techno3" type="radio" name="techno" value="3"><label for="techno3"><span>3</span></label>
+          </div>
+          <input id="techno4" type="radio" name="techno" value="4" ><label for="techno4"><span>4</span></label>
+        </div>
+        <input id="techno5" type="radio" name="techno" value="5"><label for="techno5"><span>5</span></label>
+      </div>
+      <br><br>Bemerkung: <textarea name="techno_text" cols="30" rows="2"></textarea><br>
+      <div class="progress" style="width:50%;margin-left:auto;margin-right:auto">
+        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="18" style="width:50%" text-align="center">
+          9/18
+        </div>
+      </div>
+      <br>
+      
+      <input class="nav" type="button" value="Zurück" id="Bpanel" data-page="9">
+      <input class="nav" type="button" value="Weiter" id="Fpanel" data-page="11">
+    </div>
+  </li>
+
+  <li class="dragend-page">
+    <div class="content">
+      <h1>Übernahme- und<br> Restrukturierungs-<br>potenzial</h1>
+      <a href="#" onclick="window.open('http://www.consag.ch/consulta/index.php/de/unsere-geschaeftsfelder/strategie-app', '_system');"><img src="img/help.png" class="HelpButton" alt="Help Button"></a>         <br>
+      <h3>Wertschöpfung durch Mergers & Acquisitions</h3>
+      <br>
+      Denkanstösse: Gibt es Synergiepotenziale zwischen den verschiedenen Anbietern im Markt - Kostenseitig durch bessere Auslastung von Fixkosten, preisseitig durch eine höhere Verhandlungsmacht gegenüber den Kunden? Sind wir in der Lage, akquirierte Firmen in unsere Strukturen zu integrieren?<br><br>
+      Bewertung: 
+      <div class="starRating" id="tenthrating">
+        <div>
+          <div>
+            <div>
+              <div><input id="rest1" type="radio" name="rest" value="1">
+                <label for="rest1"><span>1</span></label>
+              </div>
+              <input id="rest2" type="radio" name="rest" value="2">
+              <label for="rest2"><span>2</span></label>
+            </div>
+            <input id="rest3" type="radio" name="rest" value="3">
+            <label for="rest3"><span>3</span></label>
+          </div>
+          <input id="rest4" type="radio" name="rest" value="4">
+          <label for="rest4"><span>4</span></label>
+        </div>
+        <input id="rest5" type="radio" name="rest" value="5">
+        <label for="rest5"><span>5</span></label>
+      </div>
+      <br><br>Bemerkung: <textarea name="rest_text" cols="30" rows="2"></textarea>
+      <br>
+      <div class="progress" style="width:50%;margin-left:auto;margin-right:auto">
+        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="18" style="width:55.6%" text-align="center">
+          10/18
+        </div>
+      </div>
+      <br>
+
+      <input class="nav" type="button" value="Zurück" id="Bpanel" data-page="10"> 
+      <input class="nav" type="button" value="Weiter" id="Fpanel" data-page="12">
+    </div>
+  </li>
+
+
+
+  <!--       INTERNE NUTZENPOTENZIALE                                 -->
+
+  <li class="dragend-page">
+    <div class="content">
+      <h1>Interne Nutzenpotenziale</h1>
+      <a href="#" onclick="window.open('http://www.consag.ch/consulta/index.php/de/unsere-geschaeftsfelder/strategie-app', '_system');"><img src="img/help.png" class="HelpButton" alt="Help Button"></a>         <p>Es folgen die internen Nutzenpotenziale. Bitte fahren Sie wie bis anhin fort. Nach der Bewertung dieser Nutzenpotenziale folgt eine Visualisierung Ihrer Daten anhand eines Spinnendiagramms.</p>
+      <br>
+      <br>
+
+      <input class="nav" type="button" value="Zurück" id="Bpanel" data-page="11">
+      <input class="nav" type="button" value="Weiter" id="ContinueButton" data-page="13">
+    </div>
+  </li>
+
+  <li class="dragend-page">
+    <div class="content">
+      <h1>Bilanzpotenzial</h1>
+      <a href="#" onclick="window.open('http://www.consag.ch/consulta/index.php/de/unsere-geschaeftsfelder/strategie-app', '_system');"><img src="img/help.png" class="HelpButton" alt="Help Button"></a>         <br>
+      <h3>Erhöhung des Cash-Flows durch Neugestaltung der Bilanz (NUV,…)</h3>
+      <br>
+      Denkanstösse: Können die Zahlungsziele unserer Kundenrechnungen verkürzt werden? Können Lieferantenrechnungen später bezahlt werden? Können Lagerbestände reduziert werden, ohne dass die Qualität der Dienstleistung abnimmt? Gibt es nicht-betriebliche Vermögenswerte?<br><br>
+      Bewertung: 
+      <div class="starRating" id="11rating">
+
+        <div>
+          <div>
+            <div>
+              <div>
+                <input id="bilanz1" type="radio" name="bilanz" value="1"><label for="bilanz1"><span>1</span></label>
+              </div>
+              <input id="bilanz2" type="radio" name="bilanz" value="2"><label for="bilanz2"><span>2</span></label>
+            </div>
+            <input id="bilanz3" type="radio" name="bilanz" value="3"><label for="bilanz3"><span>3</span></label>
+          </div>
+          <input id="bilanz4" type="radio" name="bilanz" value="4" ><label for="bilanz4"><span>4</span></label>
+        </div>
+        <input id="bilanz5" type="radio" name="bilanz" value="5"><label for="bilanz5"><span>5</span></label>
+      </div>
+      <br><br>Bemerkung: <textarea name="bilanz_text" cols="30" rows="2"></textarea>
+      <br>
+      <div class="progress" style="width:50%;margin-left:auto;margin-right:auto">
+        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="18" style="width:61.1%" text-align="center">
+          11/18
+        </div>
+      </div>
+      <br>
+      
+      <input class="nav" type="button" value="Zurück" id="Bpanel" data-page="12">
+      <input class="nav" type="button" value="Weiter" id="Fpanel" data-page="14">
+    </div>
+  </li>
+
+  <li class="dragend-page">
+    <div class="content">
+      <h1>Immobilienpotenzial</h1>
+      <a href="#" onclick="window.open('http://www.consag.ch/consulta/index.php/de/unsere-geschaeftsfelder/strategie-app', '_system');"><img src="img/help.png" class="HelpButton" alt="Help Button"></a>         <br>
+      <h3>Wertschöpfung durch aktivere Bewirtschaftung des Immobilienprotfeuilles</h3>
+      <br>
+      Denkanstösse: Gibt es Grundstücke oder Häuser, die gewinnbringender eingesetzt werden können?<br><br>
+      Bewertung: 
+      <div class="starRating" id="12rating"> 
+        <div>
+          <div>
+            <div>
+              <div>
+                <input id="immo1" type="radio" name="immo" value="1"><label for="immo1"><span>1</span></label>
+              </div>
+              <input id="immo2" type="radio" name="immo" value="2"><label for="immo2"><span>2</span></label>
+            </div>
+            <input id="immo3" type="radio" name="immo" value="3"><label for="immo3"><span>3</span></label>
+          </div>
+          <input id="immo4" type="radio" name="immo" value="4" ><label for="immo4"><span>4</span></label>
+        </div>
+        <input id="immo5" type="radio" name="immo" value="5"><label for="immo5"><span>5</span></label>
+      </div>
+      <br><br>Bemerkung: <textarea name="immo_text" cols="30" rows="2"></textarea><br>
+      <div class="progress" style="width:50%;margin-left:auto;margin-right:auto">
+        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="18" style="width:66.7%" text-align="center">
+          12/18
+        </div>
+      </div>
+      <br>
+      
+      <input class="nav" type="button" value="Zurück" id="Bpanel" data-page="13">
+      <input class="nav" type="button" value="Weiter" id="Fpanel" data-page="15">
+    </div>
+  </li>
+
+  <li class="dragend-page">
+    <div class="content">
+      <h1>Internes Humanpotenzial</h1>
+      <a href="#" onclick="window.open('http://www.consag.ch/consulta/index.php/de/unsere-geschaeftsfelder/strategie-app', '_system');"><img src="img/help.png" class="HelpButton" alt="Help Button"></a>     <br>
+      <h3>Wertschöpfung durch verbesserten Personaleinsatz</h3>
+      <br>
+      Denkanstösse: Können wir unser Personal z.B. über ein motivierendes Anreizsystem noch besser einsetzen? Hat unser Personal eine hohe Eigenverantwortung? Sind unsere Mitarbeitenden stolz, bei uns zu arbeiten?<br><br>
+      Bewertung: 
+      <div class="starRating" id="13rating"> 
+        <div>
+          <div>
+            <div>
+              <div>
+                <input id="intern1" type="radio" name="intern" value="1"><label for="intern1"><span>1</span></label>
+              </div>
+              <input id="intern2" type="radio" name="intern" value="2"><label for="intern2"><span>2</span></label>
+            </div>
+            <input id="intern3" type="radio" name="intern" value="3"><label for="intern3"><span>3</span></label>
+          </div>
+          <input id="intern4" type="radio" name="intern" value="4" ><label for="intern4"><span>4</span></label>
+        </div>
+        <input id="intern5" type="radio" name="intern" value="5"><label for="intern5"><span>5</span></labe>
+      </div>
+      <br><br>Bemerkung: <textarea name="intern_text" cols="30" rows="2"></textarea><br>
+      <div class="progress" style="width:50%;margin-left:auto;margin-right:auto">
+        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="18" style="width:72.2%" text-align="center">
+          13/18
+        </div>
+      </div>
+      <br>
+
+      <input class="nav" type="button" value="Zurück" id="Bpanel" data-page="14"> 
+      <input class="nav" type="button" value="Weiter" id="Fpanel" data-page="16">
+    </div>
+  </li>
+
+  <li class="dragend-page">
+    <div class="content">
+      <h1>Wissenspotenzial</h1>
+      <a href="#" onclick="window.open('http://www.consag.ch/consulta/index.php/de/unsere-geschaeftsfelder/strategie-app', '_system');"><img src="img/help.png" class="HelpButton" alt="Help Button"></a>     <br>
+      <h3>Multiplikation und Vermarktung von vorhandenem, konkurrenzüberlegenem Wissen</h3>
+      <br>
+      Denkanstösse: Haben wir Wissen und Fähigkeiten, welches wir z.B. lizenzieren und anderen Anbietern verkaufen können? Alternativ: Können wir diesen Wissensvorsprung ausnutzen?<br><br>
+      Bewertung: 
+      <div class="starRating" id="14rating"> 
+        <div>
+          <div>
+            <div>
+              <div>
+                <input id="wissen1" type="radio" name="wissen" value="1"><label for="wissen1"><span>1</span></label>
+              </div>
+              <input id="wissen2" type="radio" name="wissen" value="2"><label for="wissen2"><span>2</span></label>
+            </div>
+            <input id="wissen3" type="radio" name="wissen" value="3"><label for="wissen3"><span>3</span></label>
+          </div>
+          <input id="wissen4" type="radio" name="wissen" value="4" ><label for="wissen4"><span>4</span></label>
+        </div>
+        <input id="wissen5" type="radio" name="wissen" value="5"><label for="wissen5"><span>5</span></label>
+      </div>
+      <br><br>Bemerkung: <textarea name="wissen_text" cols="30" rows="2"></textarea><br>
+      <div class="progress" style="width:50%;margin-left:auto;margin-right:auto">
+        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="18" style="width:77.8%" text-align="center">
+          14/18
+        </div>
+      </div>
+      <br>
+
+      <input class="nav" type="button" value="Zurück" id="Bpanel" data-page="15"> 
+      <input class="nav" type="button" value="Weiter" id="Fpanel" data-page="17">
+    </div>
+  </li>
+
+  <li class="dragend-page">
+    <div class="content">
+      <h1>Kostensenkungs-potenzial</h1>
+      <a href="#" onclick="window.open('http://www.consag.ch/consulta/index.php/de/unsere-geschaeftsfelder/strategie-app', '_system');"><img src="img/help.png" class="HelpButton" alt="Help Button"></a>     <br>
+      <h3>Wertschöpfung durch Rationaliserung, Reengineering, Lean Management</h3>
+      <br>
+      Denkanstösse: Sind wir in der Lage, unsere Dienstleistungen günstiger als die Konkurrenz zu erstellen und langfristig auch anzubieten? Könnten wir durch Reorganisation oder Ablösen bestimmter Prozesse und Systeme Kosten einsparen?<br><br>
+      Bewertung: 
+      <div class="starRating" id="15rating"> 
+        <div>
+          <div>
+            <div>
+              <div>
+                <input id="kosten1" type="radio" name="kosten" value="1"><label for="kosten1"><span>1</span></label>
+              </div>
+              <input id="kosten2" type="radio" name="kosten" value="2"><label for="kosten2"><span>2</span></label>
+            </div>
+            <input id="kosten3" type="radio" name="kosten" value="3"><label for="kosten3"><span>3</span></label>
+          </div>
+          <input id="kosten4" type="radio" name="kosten" value="4" ><label for="kosten4"><span>4</span></label>
+        </div>
+        <input id="kosten5" type="radio" name="kosten" value="5"><label for="kosten5"><span>5</span></label>
+      </div>
+      <br><br>Bemerkung: <textarea name="kosten_text" cols="30" rows="2"></textarea><br>
+      <div class="progress" style="width:50%;margin-left:auto;margin-right:auto">
+        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="18" style="width:83.3%" text-align="center">
+          15/18
+        </div>
+      </div>
+      <br>
+
+      <input class="nav" type="button" value="Zurück" id="Bpanel" data-page="16">
+      <input class="nav" type="button" value="Weiter" id="Fpanel" data-page="18">
+    </div>
+  </li>
+
+  <li class="dragend-page">
+    <div class="content">
+      <h1>Organisatorisches Potenzial</h1>
+      <a href="#" onclick="window.open('http://www.consag.ch/consulta/index.php/de/unsere-geschaeftsfelder/strategie-app', '_system');"><img src="img/help.png" class="HelpButton" alt="Help Button"></a>     <br>
+      <h3>Wertschöpfung durch Prozessoptimierung</h3>
+      <br>
+      Denkanstösse: Können wir unsere Aufbau- und Ablauforganisation so verbessern, dass wir die angebotenen Dienstleistungen in wenigeren Arbeitsschritten, mit weniger Koordinationsaufwand oder in kürzerer Zeit erbringen können, ohne dass die wahrgenommene Qualität darunter leidet?<br><br>
+      Bewertung: 
+      <div class="starRating" id="16rating">
+       <div>
+        <div>
+          <div>
+            <div>
+              <input id="organ1" type="radio" name="organ" value="1"><label for="organ1"><span>1</span></label>
+            </div>
+            <input id="organ2" type="radio" name="organ" value="2"><label for="organ2"><span>2</span></label>
+          </div>
+          <input id="organ3" type="radio" name="organ" value="3"><label for="organ3"><span>3</span></label>
+        </div>
+        <input id="organ4" type="radio" name="organ" value="4" ><label for="organ4"><span>4</span></label>
+      </div>
+      <input id="organ5" type="radio" name="organ" value="5"><label for="organ5"><span>5</span></label>
+    </div>
+    <br><br>Bemerkung: <textarea name="organ_text" cols="30" rows="2"></textarea><br>
+    <div class="progress" style="width:50%;margin-left:auto;margin-right:auto">
+      <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="18" style="width:88.9%" text-align="center">
+        16/18
+      </div>
+    </div>
+    <br>
+    <input class="nav" type="button" value="Zurück" id="Bpanel" data-page="17">
+    <input class="nav" type="button" value="Weiter" id="Fpanel" data-page="19">
+  </div>
+</li>
+
+<li class="dragend-page">
+  <div class="content">
+    <h1>Standortpotenzial</h1>
+    <a href="#" onclick="window.open('http://www.consag.ch/consulta/index.php/de/unsere-geschaeftsfelder/strategie-app', '_system');"><img src="img/help.png" class="HelpButton" alt="Help Button"></a>     <br>
+    <h3>Wertschöpfung dank geographischer Nähe zum Kunden oder günstigem Produktionsstandort</h3>
+    <br>
+    Denkanstösse:Sind wir am richtigen Ort mit unseren Einrichtungen?<br><br>
+    Bewertung: 
+    <div class="starRating" id="17rating">
+      <div>
+        <div>
+          <div>
+            <div>
+              <input id="stand1" type="radio" name="stand" value="1"><label for="stand1"><span>1</span></label>
+            </div>
+            <input id="stand2" type="radio" name="stand" value="2"><label for="stand2"><span>2</span></label>
+          </div>
+          <input id="stand3" type="radio" name="stand" value="3"><label for="stand3"><span>3</span></label>
+        </div>
+        <input id="stand4" type="radio" name="stand" value="4" ><label for="stand4"><span>4</span></label>
+      </div>
+      <input id="stand5" type="radio" name="stand" value="5"><label for="stand5"><span>5</span></label>
+    </div>
+    <br><br>Bemerkung: <textarea name="stand_text" cols="30" rows="2"></textarea><br>
+    <div class="progress" style="width:50%;margin-left:auto;margin-right:auto">
+      <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="18" style="width:94.4%" text-align="center">
+        17/18
+      </div>
+    </div>
+    <br>
+
+    <input class="nav" type="button" value="Zurück" id="Bpanel" data-page="18">
+    <input class="nav" type="button" value="Weiter" id="Fpanel" data-page="20">
+  </div>
+</li>
+
+<li class="dragend-page" id="lastPage">
+  <div class="content">
+    <h1>Synergiepotenzial</h1>
+    <a href="#" onclick="window.open('http://www.consag.ch/consulta/index.php/de/unsere-geschaeftsfelder/strategie-app', '_system');"><img src="img/help.png" class="HelpButton" alt="Help Button"></a>   
+    <br>
+    <h3>Wertschöpfung durch unternehmens-übergreifender, gemeinsamer Nutzung spezifischer Erfolgspositionen</h3>
+    <br>
+    Denkanstösse: Können wir die Leistungserstellung durch Nutzung der Fähigkeiten und Ressourcen der einzelnen Geschäftsfelder verbessern?<br><br>
+    Bewertung: 
+    <div class="starRating" id="18rating">
+      <div>
+        <div>
+          <div>
+            <div>
+              <input id="syner1" type="radio" name="syner" value="1"><label for="syner1"><span>1</span></label>
+            </div>
+            <input id="syner2" type="radio" name="syner" value="2"><label for="syner2"><span>2</span></label>
+          </div>
+          <input id="syner3" type="radio" name="syner" value="3"><label for="syner3"><span>3</span></label>
+        </div>
+        <input id="syner4" type="radio" name="syner" value="4" ><label for="syner4"><span>4</span></label>
+      </div>
+      <input id="syner5" type="radio" name="syner" value="5"><label for="syner5"><span>5</span></label>
+    </div>
+    <br><br>Bemerkung: <textarea name="syner_text" cols="30" rows="2"></textarea><br>
+    <div class="progress" style="width:50%;margin-left:auto;margin-right:auto">
+      <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="18" style="width:100%" text-align="center">
+        18/18
+      </div>
+    </div>
+    <br>
+    <input class="StartButton" type="button" value="Zum Diagramm" onClick="swConfirm();">
+    <input class="nav" type="button" value="Zurück" id="Bpanel" data-page="19">
+  </div>
+</li>
+</div>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/dragend.js"></script>
+<script type="text/javascript" src="js/slidenav.js"></script>
+<script type="text/javascript" src="js/sweetalert.min.js"></script>
+
+</body>
+</html>

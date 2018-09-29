@@ -1,0 +1,143 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" type="text/css" href="css/spiderchart.css" />
+    <script type="text/javascript" src='js/spider.js'></script>
+    <script type="text/javascript" src='js/Chart.min.js'></script>
+    <script type="text/javascript" src="js/jspdf.min"></script>
+    <title>Diagramme</title>
+
+</head>
+<body onload="insertTextInTables();">
+    <a href="#" onclick="window.open('http://www.consag.ch/consulta/index.php/de/unsere-geschaeftsfelder/strategie-app', '_system');"><img src="img/help.png" class="HelpButton" alt="Help Button"></a>         
+    <div class="app">
+        <h1>Nutzenpotenziale</h1>     
+        <div id="deviceready">
+            <h2>Externe Nutzenpotenziale</h2><br>
+            <div style="width:100%">
+                <canvas id="externPotenzial" height="400" width="600"></canvas><br>
+            </div>
+            <div id = tableE>
+                <h3>Bemerkungen</h3>
+                <table>
+                    <tr>
+                        <td id="pot1E"></td>
+                        <td id="bem1E"></td>
+                    </tr>
+                    <tr>
+                        <td id="pot2E"></td>
+                        <td id="bem2E"></td>
+                    </tr>
+                    <tr>
+                        <td id="pot3E"></td>
+                        <td id="bem3E"></td>
+                    </tr>
+                    <tr>
+                        <td id="pot4E"></td>
+                        <td id="bem4E"></td>
+                    </tr>
+                    <tr>
+                        <td id="pot5E"></td>
+                        <td id="bem5E"></td>
+                    </tr>
+                    <tr>
+                        <td id="pot6E"></td>
+                        <td id="bem6E"></td>
+                    </tr>
+                    <tr>
+                        <td id="pot7E"></td>
+                        <td id="bem7E"></td>
+                    </tr>
+                    <tr>
+                        <td id="pot8E"></td>
+                        <td id="bem8E"></td>
+                    </tr>
+                    <tr>
+                        <td id="pot9E"></td>
+                        <td id="bem9E"></td>
+                    </tr>
+                    <tr>
+                        <td id="pot10E"></td>
+                        <td id="bem10E"></td>
+                    </tr>
+                </table>
+                <br>
+                <button onclick="document.getElementById('tableE').style.display = 'none';
+                document.getElementById('show_buttonE').style.display = 'inline';">Verstecke Bemerkungen</button>
+            </div>
+            <div id = "show_buttonE">
+                <button onclick="document.getElementById('tableE').style.display = 'inline';
+                document.getElementById('show_buttonE').style.display = 'none';">Zeige Bemerkungen</button>
+            </div>
+            <br>
+            <br>
+            <h2>Interne Nutzenpotenziale</h2><br>
+            <div style="width:100%">
+                <canvas id="internPotenzial" height="400" width="600"></canvas>
+            </div>
+            <div id = tableI>
+                <h3>Bemerkungen</h3>
+                <table>
+                    <tr>
+                        <td id="pot1I"></td>
+                        <td id="bem1I"></td>
+                    </tr>
+                    <tr>
+                        <td id="pot2I"></td>
+                        <td id="bem2I"></td>
+                    </tr>
+                    <tr>
+                        <td id="pot3I"></td>
+                        <td id="bem3I"></td>
+                    </tr>
+                    <tr>
+                        <td id="pot4I"></td>
+                        <td id="bem4I"></td>
+                    </tr>
+                    <tr>
+                        <td id="pot5I"></td>
+                        <td id="bem5I"></td>
+                    </tr>
+                    <tr>
+                        <td id="pot6I"></td>
+                        <td id="bem6I"></td>
+                    </tr>
+                    <tr>
+                        <td id="pot7I"></td>
+                        <td id="bem7I"></td>
+                    </tr>
+                    <tr>
+                        <td id="pot8I"></td>
+                        <td id="bem8I"></td>
+                    </tr>
+                </table>
+                <br>
+                <button onclick="document.getElementById('tableI').style.display = 'none';
+                document.getElementById('show_buttonI').style.display = 'inline';">Verstecke Bemerkungen</button>
+            </div>
+            <div id = "show_buttonI">
+                <button onclick="document.getElementById('tableI').style.display = 'inline';
+                document.getElementById('show_buttonI').style.display = 'none';">Zeige Bemerkungen</button>
+            </div>
+            <br>
+            <br>
+            <br>
+
+            <input type="submit" value="NEU" id="newButton" onclick="javascript:history.back()">
+            <input id="csv_button" class="savePdfButton" type="button" value="Speichern" onclick="openPdf();">
+
+
+
+        </div>
+    </div>
+    <!-- <script type="text/javascript" src="js/index.js"></script> -->
+    <script type="text/javascript" src='js/spider.js'></script>
+    <script type="text/javascript" src='js/Chart.min.js'></script>
+    <script type="text/javascript" src="js/jspdf.min"></script>
+</body>
+
+</html>
